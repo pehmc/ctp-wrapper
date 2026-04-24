@@ -3,13 +3,13 @@
   <p align="center">
     Linux环境的CTP封装器
     <br />
-    <a href="https://github.com/pehmc/ctp-wrapper/demo">查看Demo</a>
+    <a href="./demo">查看Demo</a>
     ·
     <a href="https://github.com/pehmc/ctp-wrapper/issues">报告Bug</a>
   </p>
 </p>
 
-<center>
+<div align="center">
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -17,7 +17,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-</center>
+</div>
 
 ## 目录
 
