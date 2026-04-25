@@ -120,8 +120,6 @@ ctp
 [issues-url]: https://img.shields.io/github/issues/pehmc/ctp-wrapper.svg
 [license-shield]: https://img.shields.io/github/license/pehmc/ctp-wrapper.svg?style=flat-square
 [license-url]: https://github.com/pehmc/ctp-wrapper/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/shaojintian
 
 
 
