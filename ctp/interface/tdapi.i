@@ -31,7 +31,7 @@ See LICENSE file in the project root for full license information.
 %typemap(out) char[ANY], char[] {
     if ($1){
         if (!strlen($1)) {
-            $result = SWIG_FromCharPtr("");
+            $result = SWIG_FromCharPtrAndSize("", 0);
         } else {
             const std::string utf8_str = std::move(boost::locale::conv::to_utf<char>($1, "GBK"));
             $result = SWIG_FromCharPtrAndSize(utf8_str.c_str(),utf8_str.size());
