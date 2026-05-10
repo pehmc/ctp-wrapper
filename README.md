@@ -39,8 +39,8 @@
 
 1. 克隆仓库，
 2. ctp/v 管理版本
-3. 运行 `python wrapper --version <...>`
-4. `import ... from ctp.api`
+3. 运行 `python wrapper  <version>`
+4. `from ctp.api import ...`
 
 ### 文件目录说明
 
@@ -49,58 +49,54 @@
 ``` python
 ctp
 ├── api
-│   ├── ctp_constant.py
-│   ├── ctpmd.cpython-313-x86_64-linux-gnu.so
-│   ├── ctpmd.pyi
-│   ├── ctp_struct.py
-│   ├── ctptd.cpython-313-x86_64-linux-gnu.so
-│   ├── ctptd.pyi
-│   ├── ctp_typedef.py
-│   ├── __init__.py       # 暴露 api
-│   ├── thostmduserapi_se.so
-│   └── thosttraderapi_se.so
-├── generator
-│   ├── gen_cpp.py
-│   ├── gen_datatype.py
-│   ├── gen_func_const.py
-│   ├── gen_func.py
-│   ├── gen.py
-│   ├── gen_struct.py
-│   ├── gen_util.py
-│   └── templates
-│       ├── ctp_header.j2
-│       └── ctp_source.j2
+│   ├── __init__.py
+│   ├── mdapi.py
+│   ├── _mdapi.so
+│   ├── tdapi.py
+│   └── _tdapi.so
 ├── __init__.py
-├── meson.build
-├── v                     # 版本管理
-│   ├── ctp.h
+├── interface
+│   ├── mdapi.i
+│   └── tdapi.i
+├── v
+│   ├── tts_6.7.11
+│   │   ├── include
+│   │   │   ├── error.dtd
+│   │   │   ├── error.xml
+│   │   │   ├── ThostFtdcMdApi.h
+│   │   │   ├── ThostFtdcTraderApi.h
+│   │   │   ├── ThostFtdcUserApiDataType.h
+│   │   │   └── ThostFtdcUserApiStruct.h
+│   │   └── libs
+│   │       ├── thostmduserapi_se.so
+│   │       └── thosttraderapi_se.so
 │   └── v6.7.13_20260225
-│       ├── include       # 官方头文件
+│       ├── include
 │       │   ├── error.dtd
 │       │   ├── error.xml
 │       │   ├── ThostFtdcMdApi.h
 │       │   ├── ThostFtdcTraderApi.h
 │       │   ├── ThostFtdcUserApiDataType.h
 │       │   └── ThostFtdcUserApiStruct.h
-│       ├── libs          # 官方库
+│       ├── libs
 │       │   ├── thostmduserapi_se.so
 │       │   └── thosttraderapi_se.so
 │       └── src
-│           ├── ctpmd
-│           │   ├── ctpmd.cpp
-│           │   └── ctpmd.h
-│           └── ctptd
-│               ├── ctptd.cpp
-│               └── ctptd.h
+│           ├── mdapi.py
+│           ├── mdapi_wrap.cpp
+│           ├── mdapi_wrap.h
+│           ├── mdapi_wrap.o
+│           ├── tdapi.py
+│           ├── tdapi_wrap.cpp
+│           ├── tdapi_wrap.h
+│           └── tdapi_wrap.o
 └── wrapper.py
 ```
 
 ### 使用到的框架
 
-- jinja2
-- pybind11
-- pybind11-stubgen
-- meson
+- swig 4.4.1
+- python 3.13
 
 ### 鸣谢
 
